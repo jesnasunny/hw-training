@@ -1,0 +1,22 @@
+{
+    "emp_name": "John",
+    "emp_id": 1,
+    "login_time": "2024-02-26 17:36",
+    "logout_time": "2024-02-26 17:36",
+    "tasks": [
+        {
+            "task_title": "Task 1",
+            "task_description": "Explanation of Task 1",
+            "start_time": "2024-02-26 17:36",
+            "end_time": "2024-02-26 17:36",
+            "task_success": true
+        },
+        {
+            "task_title": "Task 2",
+            "task_description": "Explanation of Task 2",
+            "start_time": "2024-02-26 17:36",
+            "end_time": "2024-02-26 17:36",
+            "task_success": true
+        }
+    ]
+}
