@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "65e80fc78f5b28e8d4960093"
+  },
+  "emp_name": "Jesna",
+  "emp_id": 1,
+  "login_time": "2024-03-06 12:10",
+  "logout_time": "2024-03-06 12:10",
+  "tasks": [
+    {
+      "task_title": "Task 1",
+      "task_description": "Explanation of Task 1",
+      "start_time": "2024-03-06 12:10",
+      "end_time": "2024-03-06 12:10",
+      "task_success": true
+    },
+    {
+      "task_title": "Task 2",
+      "task_description": "Explanation of Task 2",
+      "start_time": "2024-03-06 12:10",
+      "end_time": "2024-03-06 12:10",
+      "task_success": true
+    }
+  ]
+}]
