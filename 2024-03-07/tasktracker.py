@@ -5,7 +5,6 @@ import sys
 class EmployeeTaskTracker:
     client = MongoClient('localhost', 27017)
     db = client['employee_tasks']
-
     def __init__(self, emp_name, emp_id):
         self.emp_name = emp_name
         self.emp_id = emp_id 
@@ -27,7 +26,6 @@ class EmployeeTaskTracker:
             "task_success": None
         }
         self.tasks.append(task)
-
     def end_task(self, task_index, end_time=None):
         if task_index < len(self.tasks):
             if end_time:
