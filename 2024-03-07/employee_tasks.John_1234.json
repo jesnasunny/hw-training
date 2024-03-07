@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "65e94f7b087e746b617b38a4"
+  },
+  "emp_name": "John",
+  "emp_id": "1234",
+  "login_time": {
+    "$date": "2024-03-07T10:54:11.013Z"
+  },
+  "logout_time": {
+    "$date": "2024-03-07T10:54:11.013Z"
+  },
+  "tasks": [
+    {
+      "task_title": "Task 1",
+      "task_description": "completed the pending task",
+      "start_time": "2024-03-07 10:54",
+      "end_time": "2024-03-08 15:30",
+      "task_success": true
+    }
+  ]
+}]
