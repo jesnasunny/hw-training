@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+completed the given task.
 
 url = 'https://www.bayut.com/property/details-8724106.html'
 reference no = response.xpath("//following-sibling::span[@aria-label='Reference']/text()").get()
