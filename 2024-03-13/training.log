@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+
+url = 'https://www.bayut.com/property/details-8724106.html'
+reference no = response.xpath("//following-sibling::span[@aria-label='Reference']/text()").get()
+               'Bayut - Mohsin 1bhk 413'
+price = response.xpath('//span[@aria-label="Price"]/text()').get()
+        '73,000'
+currency = response.xpath("//div[@class= 'c4fc20ba']/span[@aria-label ='Currency']/text()").get()
+          'AED'
+Location = response.xpath("//div[@class ='_1f0f1758' and @aria-label='Property header']/text()").get()
+          'Park Terrace, Arjan, Dubai'
+purpose = response.xpath("//following-sibling::span[@aria-label='Purpose']/text()").get()
+          'For Rent'
+Type = response.xpath("//following-sibling::span[@aria-label='Type']/text()").get()
+        'Apartment'
+Furnishing = response.xpath("//following-sibling::span[@aria-label='Furnishing']/text()").get()
+        'Unfurnished'
+Added on = response.xpath("//li/span[contains(text() ,'Added on')]/following-sibling::span[@aria-label='Reactivated date']/text()").get()
+        '10 March 2024'
+bedrooms = response.xpath("//span[@aria-label='Beds']/span[@class ='fc2d1086']/text()").get()
+        '1 Bed'
+bathrooms = response.xpath("//span[@aria-label='Baths']/span[@class ='fc2d1086']/text()").get()
+        '2 Baths'
+Area = response.xpath("//span[@aria-label='Area']/span[@class ='fc2d1086']/span/text()").get()
+        '752 sqft'
+Agent name = response.xpath("//span/a[@aria-label ='Agent name']/text()").get()
+        'Mohsin Raza'
+image_url =  response.xpath("//div[@class='f4b939fe _39b0d6c4']//img/@src").get()
+        'https://images.bayut.com/thumbnails/638837906-800x600.jpeg'
+breadcrumbs = response.xpath('//div[@class="_8468d109"]//a//text()').getall()
+        ['Dubai Apartments', 'Arjan', 'Park Terrace']
+amenities = response.xpath("//span[@class ='_005a682a']/text()").getall()
+description = response.xpath("//span[@class ='_2a806e1e']/text()").getall()
