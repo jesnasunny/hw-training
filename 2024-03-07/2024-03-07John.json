@@ -1,0 +1,15 @@
+{
+    "emp_name": "John",
+    "emp_id": "1234",
+    "login_time": "2024-03-07 10:54",
+    "logout_time": "2024-03-07 10:54",
+    "tasks": [
+        {
+            "task_title": "Task 1",
+            "task_description": "completed the pending task",
+            "start_time": "2024-03-07 10:54",
+            "end_time": "2024-03-08 15:30",
+            "task_success": true
+        }
+    ]
+}

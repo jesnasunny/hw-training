@@ -1,0 +1,15 @@
+meeting was held and discussed the previous day task
+studied basic commands of linux and
+   > apt-get
+   > pip
+   > nano
+   > Vim
+   > Sublime text
+   > studied about virtual environment
+completed task:
+    1.List basic linux commands and their use
+    2.Install/uninstall scrapy using apt
+    3.Install/uninstall scrapy using pip
+    4.Edit and save a file using nano
+    5.Install sublime text
+    6.Create a python 3 virtual environment and install scrapy
