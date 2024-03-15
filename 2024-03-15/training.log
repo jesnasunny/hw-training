@@ -1,0 +1,55 @@
+Meeting was conducted
+Redone the given xpath task
+extracted data from script tag.
+Tried to do the given task to make dictionary 
+
+url = 'https://www.bayut.com/property/details-8724106.html'
+
+reference no = response.xpath("//li[span[contains(text() ,'Reference no.')]]/span[2]/text()").get()
+               'Bayut - Mohsin 1bhk 413'
+
+price = response.xpath("//div[@aria-label ='Property basic info']//span[@aria-label ='Price']/text()").get()
+        '73,000'
+
+currency=response.xpath("//div[@aria-label ='Property basic info']//span[@aria-label='Currency']/text()").get()
+ 'AED'
+ location=response.xpath("//div[@aria-label ='Property basic info']//div[@aria-label='Property header']/text()").get()
+'Park Terrace, Arjan, Dubai'
+
+type=response.xpath("//div[@aria-label='Property overview']//span[@aria-label='Type']/text()").get()
+'Apartment'
+
+location=response.xpath("//div[@aria-label ='Property basic info']//div[@aria-label='Property header']/text()").get()
+'Park Terrace, Arjan, Dubai'
+
+purpose = response.xpath("//li[span[contains(text() ,'Purpose')]]/span[2]/text()").get()
+          'For Rent'
+
+Furnishing = response.xpath("//li[span[contains(text() ,'Furnishing')]]/span[2]/text()").get()
+        'Unfurnished'
+
+Added on = response.xpath("//li[span[contains(text() ,'Added on')]]/span[2]/text()").get()
+        '10 March 2024'
+
+bed=response.xpath("//div[@aria-label ='Property basic info']//span[@aria-label='Beds']/span/text()").get()
+'1 Bed'
+
+bathrroms= response.xpath("//div[@aria-label ='Property basic info']//span[@aria-label='Baths']/span/text()").get()
+'2 Baths'
+
+area=response.xpath("//div[@aria-label ='Property basic info']//span[@aria-label='Area']//span/text()").get()
+'752 sqft'
+
+agent name=response.xpath("//div[@aria-label='Side bar']//a[@aria-label='Agent name']/text()").get()
+'Mohsin Raza'
+
+image_url = response.xpath("//picture/img[@aria-label='Cover Photo']/@src").get()
+        'https://images.bayut.com/thumbnails/638837906-800x600.jpeg'
+
+breadcrumbs = response.xpath('//div[@aria-label="Breadcrumb"]//a//text()').getall()
+        ['Dubai Apartments', 'Arjan', 'Park Terrace']
+
+amenities =response.xpath("//div[@aria-label='Dialog']//span/text()").getall()
+
+description = response.xpath("//div[@aria-label='Property description']//span/text()").getall()
+
