@@ -1,0 +1,14 @@
+meet was conducted.
+Task completed partially.
+
+amenities = response.xpath('//div[@id="property-amenity-dialog"]/ul/div')
+amenities_dic = {}
+for amenity in amenities:
+    features = amenity.xpath('./div[1]/text()').get()
+    values = amenity.xpath('./div[2]//span')
+    list = []
+    for value in values:
+        value_amenity = ''.join(value.xpath('./text()').getall())
+        list.append(value_amenity)
+    print(features, '', list)
+    amenities_dic.update({features:list})
