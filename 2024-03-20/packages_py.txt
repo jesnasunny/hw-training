@@ -1,0 +1,181 @@
+cloudscraper
+
+import cloudscraper
+scraper = cloudscraper.create_scraper()
+response = scraper.get("https://www.olx.in/")
+print(response.text)
+
+
+import cloudscraper
+scraper = cloudscraper.create_scraper()
+url = 'https://www.olx.in/'
+response = scraper.get(url)
+if response.status_code == 200:  
+    print(response.text)
+else:
+    print("Failed to fetch the webpage:", response.status_code)
+
+
+random
+
+import random
+random_int = random.randint(1, 100)
+print("Random Integer:", random_int)
+
+random_float = random.random()
+print("Random Float:", random_float)
+
+my_list = [1, 2, 3, 4, 5]
+random.shuffle(my_list)
+print("Shuffled List:", my_list)
+
+random_element = random.choice(my_list)
+print("Random Element:", random_element)
+
+random_sample = random.sample(my_list, 3)
+print("Random Sample:", random_sample)
+
+os
+
+import os
+print("Current Directory:", os.getcwd())
+print("Directory Contents:", os.listdir())
+if os.path.exists('example.txt'):
+    print("example.txt exists!")
+os.mkdir('new_directory')
+os.chdir('new_directory')
+print("New Current Directory:", os.getcwd())
+with open('new_file.txt', 'w') as f:
+    f.write("This is a new file created using Python!")
+print("New Directory Contents:", os.listdir())
+os.remove('new_file.txt')
+os.chdir('..')
+os.rmdir('new_directory')
+
+
+lxml
+
+from lxml import etree
+xml_string = """
+<root>
+    <element attribute="value">Text</element>
+</root>
+"""
+root = etree.fromstring(xml_string)
+print("Element tag:", root.tag)
+print("Child element tag:", root[0].tag)
+print("Attribute value:", root[0].get("attribute"))
+print("Element text:", root[0].text)
+
+urllib
+
+import urllib.request
+url = 'https://www.example.com'
+response = urllib.request.urlopen(url)
+html_content = response.read()
+print(html_content.decode('utf-8'))
+
+datetime
+
+from datetime import datetime, timedelta
+now = datetime.now()
+print("Current Date and Time:", now)
+
+specific_date = datetime(2023, 10, 15, 8, 30, 0)
+print("Specific Date and Time:", specific_date)
+
+formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
+print("Formatted Date:", formatted_date)
+
+date_string = "2023-12-31 23:59:59"
+parsed_date = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+print("Parsed Date:", parsed_date)
+
+future_date = now + timedelta(days=7)
+print("Future Date:", future_date)
+
+
+import ast
+
+python_code = """
+def add(a, b):
+    return a + b
+"""
+parsed_ast = ast.parse(python_code)
+class MyTransformer(ast.NodeTransformer):
+    def visit_FunctionDef(self, node):
+        # Modify the function name
+        node.name = 'sum'
+        return node
+
+transformed_ast = MyTransformer().visit(parsed_ast)
+
+modified_code = ast.unparse(transformed_ast)
+print(modified_code)
+
+logging
+
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger('example_logger')
+logger.debug('This is a debug message')
+logger.info('This is an info message')
+logger.warning('This is a warning message')
+logger.error('This is an error message')
+logger.critical('This is a critical message')
+
+
+
+parsel
+
+from parsel import Selector
+
+# HTML document string
+html = """
+<html>
+    <body>
+        <div class="container">
+            <h1>Title</h1>
+            <p>Hello, world!</p>
+        </div>
+    </body>
+</html>
+"""
+selector = Selector(text=html)
+title = selector.css('h1::text').get()
+
+paragraph = selector.css('p::text').get()
+
+print("Title:", title)
+print("Paragraph:", paragraph)
+
+
+from parsel import Selector
+
+html_text = "<html><body><h1>Hello, Parsel!</h1></body></html>"
+
+html_selector = Selector(text=html_text)
+
+html_selector.css('h1')
+html_selector.xpath('//h1')
+
+CSV
+import csv
+data = [
+    ['Name', 'Age', 'Country'],
+    ['Alice', 30, 'India'],
+    ['Bob', 25, 'Sweden'],
+    ['Charlie', 35, 'GEermany']
+]
+
+with open('data.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    for row in data:
+        writer.writerow(row)
+with open('data.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        print(', '.join(row))
+
+
