@@ -8,6 +8,11 @@ class ColdwellBanker:
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
         }
         self.session = requests.Session()
+        self.client = MongoClient('localhost', 27017)
+        self.db = self.client['coldwellbanker_sitemapagents']
+        self.urls_collection = self.db['urls']
+        self.urls_collection.create_index([('url', 1)], unique=True)
+
 
     def get_robots_txt(self):
         url = "https://www.coldwellbanker.com/robots.txt"
@@ -78,6 +83,7 @@ class ColdwellBanker:
                     if parsed_urls:
                         for parsed_url in parsed_urls:
                             print("URL from XML:", parsed_url)
+                            self.urls_collection.insert_one({'url': parsed_url})
                     else:
                         print("No URLs found in XML content from URL:", url)
                 else:
