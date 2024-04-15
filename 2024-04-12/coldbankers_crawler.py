@@ -56,7 +56,7 @@ class ColdwellBanker:
         if robots_txt:
             sitemap_urls = self.get_sitemap_urls(robots_txt)
             if len(sitemap_urls) >= 4:
-                agent_url = sitemap_urls[3]  # Index starts from 0
+                agent_url = sitemap_urls[3]  
                 print(f"Fourth sitemap URL found: {agent_url}")
                 response = self.session.get(agent_url, headers=self.headers)
                 if response.status_code == 200:
