@@ -1,0 +1,4 @@
+extracted all fileds from site 'https://www.carrefouruae.com/mafuae/en/'
+completed parser code and data extraction in progress.
+meeting was conducted and modifications done in code as instructed
+tried insert_many and insert_one in mongodb
